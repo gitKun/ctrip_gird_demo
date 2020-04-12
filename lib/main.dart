@@ -1,4 +1,5 @@
 import 'package:ctrip_gird_demo/grid_widget.dart';
+import 'package:ctrip_gird_demo/sub_nav/sub_nav_widget.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(CtripGridApp());
@@ -18,10 +19,17 @@ class CtripGridApp extends StatelessWidget {
             style: TextStyle(fontSize: 18),
           ),
         ),
-        body: Container(
-          padding: EdgeInsets.only(top: 146),
-          margin: EdgeInsets.only(left: 16, right: 16),
-          child: GridWidget(),
+        body: ListView(
+          children: <Widget>[
+            Container(
+              margin: EdgeInsets.fromLTRB(16, 50, 16, 0),
+              child: GridWidget(),
+            ),
+            Container(
+              margin: EdgeInsets.fromLTRB(16, 10, 16, 0),
+              child: SubNavWidget(),
+            ),
+          ],
         ),
       ),
     );
