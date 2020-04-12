@@ -1,9 +1,7 @@
-import 'dart:async';
-
-import 'package:ctrip_gird_demo/sub_nav/sub_nav_sprites_image.dart';
-//import 'package:ctrip_gird_demo/util/image_load.dart';
 import 'package:flutter/material.dart';
 import 'dart:ui' as ui;
+import 'dart:async';
+import 'package:ctrip_gird_demo/sub_nav/sub_nav_sprites_image.dart';
 
 class SubNavWidget extends StatelessWidget {
   final List<String> _names = [
@@ -57,10 +55,6 @@ class SubNavWidget extends StatelessWidget {
     );
     stream.addListener(listener); //添加监听
     return completer.future;
-  }
-
-  Widget xxxx() {
-    return Image(image: AssetImage('assetName'));
   }
 
   Widget _nomalItemExpanded(index, ui.Image img) {
